@@ -1,0 +1,16 @@
+# ProductCode,Name,Description,Quantity,BarCode,UnitPrice,StockStatus,Purchase/Sale
+PROD001,HP_Laptop_15S,15_inch_laptop_8GB_RAM_256GB_SSD,50,0001002001,699.99,In_stock,Sale
+PROD002,Canon_Printer_LBP6030,Black_white_laser_printer_600DPI,30,0001002002,119.99,In_stock,Sale
+PROD003,USB_Flash_32GB,32GB_USB_flash_drive_high_speed,150,0001002003,9.99,In_stock,Sale
+PROD004,Dell_Monitor_24,24_inch_FHD_monitor_75Hz,25,0001002004,149.99,Low_stock,Sale
+PROD005,Office_Chair_Ergonomic,Adjustable_office_chair_black,10,0001002005,85.00,Low_stock,Sale
+PROD006,Samsung_Galaxy_A13,Smartphone_4GB_RAM_64GB,40,0001002006,179.99,In_stock,Sale
+PROD007,Coffee_Machine_Deluxe,Coffee_machine_with_frother,5,0001002007,49.99,Out_of_stock,Sale
+PROD008,Apple_Keyboard_Bluetooth,Wireless_Bluetooth_keyboard,20,0001002008,99.99,In_stock,Sale
+PROD009,External_HDD_1TB,1TB_external_hard_drive_USB3.0,45,0001002009,59.99,In_stock,Sale
+PROD010,Headphones_Noise_Canceling,Wireless_noise_canceling_headphones,15,0001002010,129.99,Low_stock,Sale
+PROD011,Wireless_Mouse,Mini_wireless_mouse,100,0001002011,12.99,In_stock,Sale
+PROD012,LED_Desk_Lamp,LED_desk_lamp_with_USB,60,0001002012,19.99,In_stock,Sale
+PROD013,Notebook_A5,A5_notebook_200_pages,250,0001002013,2.49,In_stock,Sale
+PROD014,Smartwatch_Series6,Waterproof_smartwatch,20,0001002014,199.99,Low_stock,Sale
+PROD015,USB_TypeC_Cable,Fast_USB-C_cable,300,0001002015,3.49,In_stock,Sale
