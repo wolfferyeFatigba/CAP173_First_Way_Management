@@ -8,10 +8,10 @@
 typedef struct  manager_t{
     char *product_name;
     char *code_bar_serie;
-    int *quantity
+    int quantity
 }manager_t;
 
 
-void fill_the_struct();
+void fill_the_struct_tab();
 
 #endif MANAGER_H
