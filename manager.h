@@ -5,13 +5,14 @@
 #include <string.h>
 #include <stdlib.h>
 
-typedef struct  manager_t{
+typedef struct {
     char *product_name;
     char *code_bar_serie;
     int quantity
-}manager_t;
+} manager_t;
 
 
 void fill_the_struct_tab();
+void update(manager_t *s, int y);
 
-#endif MANAGER_H
+#endif /* MANAGER_H */
