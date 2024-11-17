@@ -30,12 +30,12 @@ for(int h = 1; g < y; g++, h++){
     strcpy(s1[g].code_bar_serie, code);
 }
 for(int h = 1; l < y; l++, h++){
-    printf("Actual quantity of product%d you want to put in stock:", h);
+    printf("Actual quantity of product %d you want to put in stock:", h);
     scanf("%d", &quantity);
     printf("\n");
     s1[l].quantity = quantity;
 }
-update(s1, y);
+add(s1, y);
 for(int i = 0; i < y; i++) {
     free(s1[i].code_bar_serie);
 }
@@ -45,18 +45,26 @@ for(int j = 0; j < y; j++){
 free(s1);
 }
 
-void update(manager_t *s, int y)
+void add(manager_t *s, int y)
 {
-    int a = 0, n = 0;
-    char str[50];
-    printf("Please enter the product you want to update:");
-    scanf("%s", str);
-    printf("\nEnter the quantity you want to add now:");
-    scanf("%d", &n);
-    for(;a < y; a++) {
-        if (strcmp(str, s[a].product_name) == 0) {
-                s[a].quantity += n;
+    int a = 0, n = 0, b = 0;
+    char str[50];char ans[10];
+    printf("Do you want to sell or add a product? Type \"sell\" or \" add\"");
+    scanf("%s", ans);
+    
+    
+    if (strcmp(ans, "sell") == 0) {
+        printf("How many product are you selling?");
+        scanf("%d", &b);
+        for(;a < b; a++) {
+            printf("Product name: ");
+            scanf("%s", str);
+            printf("\nEnter the quantity you want to sell now:");
+            scanf("%d", &n);
+            if (strcmp(str, s[a].product_name) == 0) {
+                s[a].quantity -= n;
                 printf("%d",s[a].quantity);
         }
     }
+}
 }

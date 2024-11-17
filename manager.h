@@ -13,6 +13,6 @@ typedef struct {
 
 
 void fill_the_struct_tab();
-void update(manager_t *s, int y);
+void add(manager_t *s, int y);
 
 #endif /* MANAGER_H */
