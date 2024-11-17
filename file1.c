@@ -4,15 +4,14 @@ void fill_the_struct_tab(int y)
 {
 manager_t *s1;
 int k = 0, l = 0, g = 0;
+char ans[5];
 char prod_name[50];
-char code[50];
 int quantity;
 printf("Please enter number of initial product in your stock base:");
 scanf("%d", &y);
 s1 = malloc(sizeof(manager_t) * (y));
 for (int i = 0; i < y; i++) {
         s1[i].product_name = NULL;
-        s1[i].code_bar_serie = NULL;
     }
 for(int h = 1; k < y; k++, h++) {
     printf("Product %d name:", h);
@@ -23,11 +22,10 @@ for(int h = 1; k < y; k++, h++) {
 }
 //printf("Enter the code bar series:");
 for(int h = 1; g < y; g++, h++){
-    printf("Code bar %d:", h);
-    scanf("%s", code);
-    printf("\n");
-    s1[g].code_bar_serie = malloc(strlen(code) + 1);
-    strcpy(s1[g].code_bar_serie, code);
+    //printf("Code bar %d:", h);
+    //printf("\n");
+    s1[g].code_bar_serie = generate_code();
+    printf("Code bar %d : %d\n", h, s1[g].code_bar_serie);
 }
 for(int h = 1; l < y; l++, h++){
     printf("Actual quantity of product %d you want to put in stock:", h);
@@ -36,8 +34,10 @@ for(int h = 1; l < y; l++, h++){
     s1[l].quantity = quantity;
 }
 add(s1);
-for(int i = 0; i < y; i++) {
-    free(s1[i].code_bar_serie);
+printf("Do you want to display your stock base?");
+scanf("%s", ans);
+if (strcmp(ans, "yes") == 0) {
+    print_sb(y, s1);
 }
 for(int j = 0; j < y; j++){
     free(s1[j].product_name);
@@ -78,4 +78,21 @@ void add(manager_t *s)
         }
     }
 }
+}
+
+void print_sb(int y, manager_t *s)
+{
+    int a = 0;
+    for (int n = 1; a < y; a++, n++) {
+        printf("PROD00%d %s %d %d\n", n, s[a].product_name, s[a].code_bar_serie, s[a].quantity);
+    }
+}
+
+int generate_code()
+{
+    int h = 0; int val = 0;
+    for (; h < 10; h++) {
+        val = rand();
+    }
+    return(val);
 }
