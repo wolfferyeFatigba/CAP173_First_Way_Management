@@ -7,7 +7,7 @@ NAME 	= 	manage
 
 all: 	   $(NAME)
 
-%.c: %.o
+%.o: %.c
 	gcc -c $^ 
 
 $(NAME): 	$(OBJ)

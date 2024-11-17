@@ -8,11 +8,11 @@
 typedef struct {
     char *product_name;
     char *code_bar_serie;
-    int quantity
+    int quantity;
 } manager_t ;
 
 
 void fill_the_struct_tab();
-void add(manager_t *s, int y);
+void add(manager_t *s);
 
 #endif /* MANAGER_H */

@@ -35,7 +35,7 @@ for(int h = 1; l < y; l++, h++){
     printf("\n");
     s1[l].quantity = quantity;
 }
-add(s1, y);
+add(s1);
 for(int i = 0; i < y; i++) {
     free(s1[i].code_bar_serie);
 }
@@ -45,14 +45,12 @@ for(int j = 0; j < y; j++){
 free(s1);
 }
 
-void add(manager_t *s, int y)
+void add(manager_t *s)
 {
     int a = 0, n = 0, b = 0;
     char str[50];char ans[10];
     printf("Do you want to sell or add a product? Type \"sell\" or \"add\": ");
     scanf("%s", ans);
-    
-    
     if (strcmp(ans, "sell") == 0) {
         printf("How many product are you selling?: ");
         scanf("%d", &b);
