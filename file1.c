@@ -49,20 +49,33 @@ void add(manager_t *s, int y)
 {
     int a = 0, n = 0, b = 0;
     char str[50];char ans[10];
-    printf("Do you want to sell or add a product? Type \"sell\" or \" add\"");
+    printf("Do you want to sell or add a product? Type \"sell\" or \"add\": ");
     scanf("%s", ans);
     
     
     if (strcmp(ans, "sell") == 0) {
-        printf("How many product are you selling?");
+        printf("How many product are you selling?: ");
         scanf("%d", &b);
         for(;a < b; a++) {
-            printf("Product name: ");
+            printf("\nProduct name: ");
             scanf("%s", str);
-            printf("\nEnter the quantity you want to sell now:");
+            printf("\nEnter the quantity you want to sell now: ");
             scanf("%d", &n);
             if (strcmp(str, s[a].product_name) == 0) {
                 s[a].quantity -= n;
+                printf("%d",s[a].quantity);
+        }
+    }
+} else if (strcmp(ans, "add") == 0) {
+    printf("How many product are you adding in the stock?");
+    scanf("%d", &b);
+    for(; a < b; a++) {
+        printf("Product name: ");
+        scanf("%s", str);
+        printf("\nEnter the quantity you want to add now: ");
+        scanf("%d", &n);
+        if (strcmp(str, s[a].product_name) == 0) {
+                s[a].quantity += n;
                 printf("%d",s[a].quantity);
         }
     }

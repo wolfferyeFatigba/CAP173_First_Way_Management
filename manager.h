@@ -9,7 +9,7 @@ typedef struct {
     char *product_name;
     char *code_bar_serie;
     int quantity
-} manager_t;
+} manager_t ;
 
 
 void fill_the_struct_tab();
